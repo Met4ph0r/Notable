@@ -12,6 +12,7 @@ dotenv.config();
 connectDB();
 
 const app = express(); // main thing
+const mode = process.env.NODE_ENV || "production"
 
 app.use(express.json()); // to accept json data
 
@@ -21,7 +22,7 @@ app.use("/api/users", userRoutes);
 // --------------------------deployment------------------------------
 const __dirname = path.resolve();
 
-if (process.env.NODE_ENV === "production") {
+if (mode === "production") {
   app.use(express.static(path.join(__dirname, "/frontend/build")));
 
   app.get("*", (req, res) =>
@@ -43,6 +44,6 @@ const PORT = process.env.PORT || 5000;
 app.listen(
   PORT,
   console.log(
-    `Server running in ${process.env.NODE_ENV} mode on port ${PORT}..`.yellow.bold
+    `Server running in ${mode} mode on port ${PORT}..`.yellow.bold
   )
 );
