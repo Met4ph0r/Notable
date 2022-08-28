@@ -1,0 +1,81 @@
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@200&display=swap");
+
+.navbarMain{
+  background: #d1f9ff8d;
+  min-width: 100vw;
+  border: none;
+  box-shadow: 0px 5px 10px rgb(23, 160, 158);
+  position: fixed;
+  font-weight: bold;
+}
+
+.navbar-light .navbar-brand{
+  color:rgb(244, 21, 62);
+  font-size: 30px;
+  text-shadow: 2px 2px rgb(243, 164, 164);
+  transition: 300ms ease-in-out;
+  position: relative;
+}
+
+.navbar-light:hover .navbar-brand:hover{
+  color:rgb(226, 54, 83);
+  text-shadow: 3px 3px rgb(252, 217, 217);
+}
+
+.navbar-brand::before{
+  content: '';
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 0;
+  height: 5px;
+  background-color: #ef094e;
+  transition: 300ms ease-in-out;
+}
+
+@media (hover: hover) and (pointer: fine) {
+.navbar-brand:hover::before{
+  left: 0;
+  right: auto;
+  width: 100%;
+  }
+}
+
+.navbar-light .navbar-nav .nav-link{
+  color: rgb(26, 223, 237);
+  /* text-shadow: 2px 2px rgb(28, 178, 189); */
+  background-color: rgba(225, 255, 254, 0.688);
+  border-radius: 15px;
+  font-size: 20px;
+  transition: 300ms ease-in-out;
+}
+
+.navbar-light:hover .navbar-nav:hover .nav-link:hover{
+  color: rgb(255, 255, 255);
+  background-color: rgba(91, 254, 254, 0.958);
+}
+
+.mainback {
+  min-height: 93vh;
+  display: flex;
+  padding: 10px 0;
+}
+
+.page {
+  width: 100%;
+}
+.heading {
+  font-size: 60px;
+  padding: 5px 10px;
+}
+
+@media only screen and (min-width: 1200px) {
+}
+
+@media only screen and (max-width: 600px) {
+  .heading {
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+  }
+}

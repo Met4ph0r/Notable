@@ -1,0 +1,112 @@
+.title1{
+  margin-top:140px;
+  font-size: 40px;
+  color: rgb(0, 0, 0);
+  /* color: rgb(15, 208, 208); */
+}
+
+.title2{
+  color: rgb(244, 34, 83);
+  text-shadow: 3px 3px rgb(158, 20, 78);
+  font-size: 95px;
+}
+
+.subtitle {
+  margin-top: 50px;
+  font-size: 25px;
+  padding-top: 10px;
+}
+.intro-text {
+  width: 100%;
+  text-align: center;
+}
+.main {
+  min-height: 93vh;
+  display: flex;
+  align-items: center;
+  background-image: url("../../background.png");
+  background-size:cover;
+  background-position: top;
+}
+
+.buttonContainer {
+  margin-top: 50px;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.landingbutton {
+  background-color: rgb(15, 208, 208);
+  /* background-color: rgb(240, 158, 173); */
+  box-shadow: 5px 5px rgb(0, 128, 128);
+  border: none;
+  outline: none;
+  width: 200px;
+  height: 55px;
+  transition: 200ms ease-in-out;
+  user-select: none;
+}
+
+.landingbutton:hover {
+  background-color:  rgb(15, 208, 208);
+  border: none;
+  outline: none;
+  width: 200px;
+  height: 55px;
+  transform: translate(-2px, -3px);
+  box-shadow: 12px 12px rgb(0, 181, 181);
+}
+
+.landingbutton:active {
+  background-color: rgb(240, 158, 173)!important;
+  border: 0px;
+  outline: none;
+  transform: translate(0px, 0px);
+  box-shadow: 5px 5px rgb(183, 56, 80) inset;
+}
+
+.landingbutton:focus {
+  background-color: rgb(240, 158, 173)!important;
+  border: none;
+  outline: none;
+  transform: translate(0px, 0px);
+  box-shadow: 5px 5px rgb(183, 56, 80) inset;
+}
+
+.signup{
+  background-color: rgb(226, 53, 85)!important;
+  color: white;
+  box-shadow: 5px 5px rgb(216, 86, 110);
+}
+.signup:hover{
+  background-color: rgb(226, 53, 85)!important;
+  color: white;
+  box-shadow: 12px 12px rgb(231, 135, 152);
+}
+.signup:active{
+  background-color: rgb(226, 53, 85)!important;
+  color: white;
+}
+.signup:focus{
+  background-color: rgb(226, 53, 85)!important;
+  color: white;
+}
+
+@media only screen and (min-width: 1200px) {
+  .buttonContainer {
+    padding: 0 200px;
+  }
+  .title {
+    padding: 0 100px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .title {
+    font-size: 60px;
+  }
+  .landingbutton {
+    width: 150px;
+    height: 50px;
+  }
+}
